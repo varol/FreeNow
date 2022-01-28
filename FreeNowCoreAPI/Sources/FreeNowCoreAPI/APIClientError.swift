@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  APIClientError.swift
 //  
 //
 //  Created by Varol Aksoy on 28.01.2022.

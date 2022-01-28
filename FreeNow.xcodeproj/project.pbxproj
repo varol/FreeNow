@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		E447B3E727A46A9A003F9BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B3E627A46A9A003F9BB8 /* AppDelegate.swift */; };
 		E447B3E927A46A9A003F9BB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B3E827A46A9A003F9BB8 /* SceneDelegate.swift */; };
-		E447B3EB27A46A9A003F9BB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B3EA27A46A9A003F9BB8 /* ViewController.swift */; };
-		E447B3EE27A46A9A003F9BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E447B3EC27A46A9A003F9BB8 /* Main.storyboard */; };
 		E447B3F027A46A9C003F9BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E447B3EF27A46A9C003F9BB8 /* Assets.xcassets */; };
 		E447B3F327A46A9C003F9BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E447B3F127A46A9C003F9BB8 /* LaunchScreen.storyboard */; };
 		E447B3FE27A46A9D003F9BB8 /* FreeNowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B3FD27A46A9D003F9BB8 /* FreeNowTests.swift */; };
 		E447B40827A46A9D003F9BB8 /* FreeNowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B40727A46A9D003F9BB8 /* FreeNowUITests.swift */; };
 		E447B40A27A46A9D003F9BB8 /* FreeNowUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B40927A46A9D003F9BB8 /* FreeNowUITestsLaunchTests.swift */; };
+		E447B41827A47270003F9BB8 /* FreeNowCoreAPI in Frameworks */ = {isa = PBXBuildFile; productRef = E447B41727A47270003F9BB8 /* FreeNowCoreAPI */; };
+		E447B41A27A473AA003F9BB8 /* VehiclesEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B41927A473AA003F9BB8 /* VehiclesEndpointItem.swift */; };
+		E447B41C27A475E8003F9BB8 /* VehiclesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B41B27A475E8003F9BB8 /* VehiclesResponse.swift */; };
+		E447B42127A47822003F9BB8 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B41F27A47822003F9BB8 /* SplashViewController.swift */; };
+		E447B42227A47822003F9BB8 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E447B42027A47822003F9BB8 /* SplashViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +42,6 @@
 		E447B3E327A46A9A003F9BB8 /* FreeNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E447B3E627A46A9A003F9BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E447B3E827A46A9A003F9BB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E447B3EA27A46A9A003F9BB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E447B3ED27A46A9A003F9BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E447B3EF27A46A9C003F9BB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E447B3F227A46A9C003F9BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E447B3F427A46A9C003F9BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,10 @@
 		E447B40327A46A9D003F9BB8 /* FreeNowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeNowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E447B40727A46A9D003F9BB8 /* FreeNowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeNowUITests.swift; sourceTree = "<group>"; };
 		E447B40927A46A9D003F9BB8 /* FreeNowUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeNowUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E447B41927A473AA003F9BB8 /* VehiclesEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesEndpointItem.swift; sourceTree = "<group>"; };
+		E447B41B27A475E8003F9BB8 /* VehiclesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesResponse.swift; sourceTree = "<group>"; };
+		E447B41F27A47822003F9BB8 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		E447B42027A47822003F9BB8 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E447B41827A47270003F9BB8 /* FreeNowCoreAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,7 @@
 				E447B3FC27A46A9D003F9BB8 /* FreeNowTests */,
 				E447B40627A46A9D003F9BB8 /* FreeNowUITests */,
 				E447B3E427A46A9A003F9BB8 /* Products */,
+				E447B41627A47270003F9BB8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +106,13 @@
 		E447B3E527A46A9A003F9BB8 /* FreeNow */ = {
 			isa = PBXGroup;
 			children = (
-				E447B3E627A46A9A003F9BB8 /* AppDelegate.swift */,
-				E447B3E827A46A9A003F9BB8 /* SceneDelegate.swift */,
-				E447B3EA27A46A9A003F9BB8 /* ViewController.swift */,
-				E447B3EC27A46A9A003F9BB8 /* Main.storyboard */,
+				E447B41E27A477FE003F9BB8 /* App */,
+				E447B41D27A477F8003F9BB8 /* Splash */,
 				E447B3EF27A46A9C003F9BB8 /* Assets.xcassets */,
 				E447B3F127A46A9C003F9BB8 /* LaunchScreen.storyboard */,
 				E447B3F427A46A9C003F9BB8 /* Info.plist */,
+				E447B41927A473AA003F9BB8 /* VehiclesEndpointItem.swift */,
+				E447B41B27A475E8003F9BB8 /* VehiclesResponse.swift */,
 			);
 			path = FreeNow;
 			sourceTree = "<group>";
@@ -127,6 +134,31 @@
 			path = FreeNowUITests;
 			sourceTree = "<group>";
 		};
+		E447B41627A47270003F9BB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E447B41D27A477F8003F9BB8 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				E447B41F27A47822003F9BB8 /* SplashViewController.swift */,
+				E447B42027A47822003F9BB8 /* SplashViewController.xib */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		E447B41E27A477FE003F9BB8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E447B3E627A46A9A003F9BB8 /* AppDelegate.swift */,
+				E447B3E827A46A9A003F9BB8 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +175,9 @@
 			dependencies = (
 			);
 			name = FreeNow;
+			packageProductDependencies = (
+				E447B41727A47270003F9BB8 /* FreeNowCoreAPI */,
+			);
 			productName = FreeNow;
 			productReference = E447B3E327A46A9A003F9BB8 /* FreeNow.app */;
 			productType = "com.apple.product-type.application";
@@ -232,8 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E447B3F327A46A9C003F9BB8 /* LaunchScreen.storyboard in Resources */,
+				E447B42227A47822003F9BB8 /* SplashViewController.xib in Resources */,
 				E447B3F027A46A9C003F9BB8 /* Assets.xcassets in Resources */,
-				E447B3EE27A46A9A003F9BB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E447B3EB27A46A9A003F9BB8 /* ViewController.swift in Sources */,
+				E447B41A27A473AA003F9BB8 /* VehiclesEndpointItem.swift in Sources */,
+				E447B41C27A475E8003F9BB8 /* VehiclesResponse.swift in Sources */,
 				E447B3E727A46A9A003F9BB8 /* AppDelegate.swift in Sources */,
 				E447B3E927A46A9A003F9BB8 /* SceneDelegate.swift in Sources */,
+				E447B42127A47822003F9BB8 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +334,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E447B3EC27A46A9A003F9BB8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E447B3ED27A46A9A003F9BB8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E447B3F127A46A9C003F9BB8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,9 +471,9 @@
 				DEVELOPMENT_TEAM = GDP6Y3828G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FreeNow/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = SplashViewController;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,9 +499,9 @@
 				DEVELOPMENT_TEAM = GDP6Y3828G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FreeNow/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = SplashViewController;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -624,6 +653,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E447B41727A47270003F9BB8 /* FreeNowCoreAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FreeNowCoreAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E447B3DB27A46A9A003F9BB8 /* Project object */;
 }
