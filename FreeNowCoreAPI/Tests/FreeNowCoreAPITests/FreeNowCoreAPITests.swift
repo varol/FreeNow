@@ -6,6 +6,5 @@ final class FreeNowCoreAPITests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(FreeNowCoreAPI().text, "Hello, World!")
     }
 }
