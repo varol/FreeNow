@@ -1,5 +1,5 @@
 //
-//  SplashViewController.swift
+//  BaseViewController.swift
 //  FreeNow
 //
 //  Created by Varol Aksoy on 28.01.2022.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class SplashViewController: UIViewController {
+class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
+    
 }
