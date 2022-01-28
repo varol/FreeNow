@@ -1,5 +1,5 @@
 //
-//  BaseViewController.swift
+//  MapViewController.swift
 //  FreeNow
 //
 //  Created by Varol Aksoy on 28.01.2022.
@@ -7,10 +7,11 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+final class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
-    
+
 }

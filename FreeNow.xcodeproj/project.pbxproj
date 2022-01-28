@@ -25,6 +25,18 @@
 		E447B42D27A4855E003F9BB8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B42C27A4855E003F9BB8 /* MainTabBarController.swift */; };
 		E447B43127A485A1003F9BB8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B42F27A485A1003F9BB8 /* MapViewController.swift */; };
 		E447B43227A485A1003F9BB8 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E447B43027A485A1003F9BB8 /* MapViewController.xib */; };
+		E4A2B9A527A48C8E00CBD5E6 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A2B9A427A48C8E00CBD5E6 /* UICollectionView+Extension.swift */; };
+		E4A2B9A927A48CFC00CBD5E6 /* VehicleListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A2B9A727A48CFC00CBD5E6 /* VehicleListCollectionViewCell.swift */; };
+		E4A2B9AA27A48CFC00CBD5E6 /* VehicleListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A2B9A827A48CFC00CBD5E6 /* VehicleListCollectionViewCell.xib */; };
+		E4A2B9AC27A48D1500CBD5E6 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A2B9AB27A48D1500CBD5E6 /* BaseCollectionViewCell.swift */; };
+		E4A2B9AE27A48D8B00CBD5E6 /* VehicleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A2B9AD27A48D8B00CBD5E6 /* VehicleListViewModel.swift */; };
+		E4A2B9B027A4901200CBD5E6 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A2B9AF27A4901200CBD5E6 /* Collection+Extension.swift */; };
+		E4A2B9B327A4914B00CBD5E6 /* LoadingShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A2B9B227A4914B00CBD5E6 /* LoadingShowable.swift */; };
+		E4A2B9B727A4917800CBD5E6 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A2B9B627A4917800CBD5E6 /* LoadingView.swift */; };
+		E4A2B9B927A4951300CBD5E6 /* VehicleListCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A2B9B827A4951300CBD5E6 /* VehicleListCollectionViewCellViewModel.swift */; };
+		E4A2B9BB27A4969300CBD5E6 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A2B9BA27A4969300CBD5E6 /* UICollectionViewCell+Extension.swift */; };
+		E4A2B9BD27A4973C00CBD5E6 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A2B9BC27A4973C00CBD5E6 /* BaseViewModel.swift */; };
+		E4A2B9BF27A498D700CBD5E6 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A2B9BE27A498D700CBD5E6 /* BaseLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +78,18 @@
 		E447B42C27A4855E003F9BB8 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E447B42F27A485A1003F9BB8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E447B43027A485A1003F9BB8 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		E4A2B9A427A48C8E00CBD5E6 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		E4A2B9A727A48CFC00CBD5E6 /* VehicleListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListCollectionViewCell.swift; sourceTree = "<group>"; };
+		E4A2B9A827A48CFC00CBD5E6 /* VehicleListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleListCollectionViewCell.xib; sourceTree = "<group>"; };
+		E4A2B9AB27A48D1500CBD5E6 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		E4A2B9AD27A48D8B00CBD5E6 /* VehicleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListViewModel.swift; sourceTree = "<group>"; };
+		E4A2B9AF27A4901200CBD5E6 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		E4A2B9B227A4914B00CBD5E6 /* LoadingShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingShowable.swift; sourceTree = "<group>"; };
+		E4A2B9B627A4917800CBD5E6 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E4A2B9B827A4951300CBD5E6 /* VehicleListCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		E4A2B9BA27A4969300CBD5E6 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		E4A2B9BC27A4973C00CBD5E6 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		E4A2B9BE27A498D700CBD5E6 /* BaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,14 +142,15 @@
 		E447B3E527A46A9A003F9BB8 /* FreeNow */ = {
 			isa = PBXGroup;
 			children = (
-				E447B42827A47A77003F9BB8 /* Base */,
 				E447B41E27A477FE003F9BB8 /* App */,
-				E4A2B9A227A48B3700CBD5E6 /* Screens */,
+				E4A2B9C327A4AEB400CBD5E6 /* Endpoints */,
+				E4A2B9B127A4913A00CBD5E6 /* Utils */,
+				E4A2B9A327A48C7400CBD5E6 /* Extensions */,
+				E447B42827A47A77003F9BB8 /* Base */,
+				E4A2B9A227A48B3700CBD5E6 /* Modules */,
 				E447B3EF27A46A9C003F9BB8 /* Assets.xcassets */,
 				E447B3F127A46A9C003F9BB8 /* LaunchScreen.storyboard */,
 				E447B3F427A46A9C003F9BB8 /* Info.plist */,
-				E447B41927A473AA003F9BB8 /* VehiclesEndpointItem.swift */,
-				E447B41B27A475E8003F9BB8 /* VehiclesResponse.swift */,
 			);
 			path = FreeNow;
 			sourceTree = "<group>";
@@ -175,8 +200,10 @@
 		E447B42327A47A58003F9BB8 /* VehicleList */ = {
 			isa = PBXGroup;
 			children = (
-				E447B42427A47A6E003F9BB8 /* VehicleListViewController.swift */,
-				E447B42527A47A6E003F9BB8 /* VehicleListViewController.xib */,
+				E4A2B9C127A4AE5500CBD5E6 /* Model */,
+				E4A2B9C227A4AE6400CBD5E6 /* ViewModel */,
+				E4A2B9C027A4AE4400CBD5E6 /* View */,
+				E4A2B9A627A48CE100CBD5E6 /* Cells */,
 			);
 			path = VehicleList;
 			sourceTree = "<group>";
@@ -185,6 +212,9 @@
 			isa = PBXGroup;
 			children = (
 				E447B42927A47A83003F9BB8 /* BaseViewController.swift */,
+				E4A2B9AB27A48D1500CBD5E6 /* BaseCollectionViewCell.swift */,
+				E4A2B9BC27A4973C00CBD5E6 /* BaseViewModel.swift */,
+				E4A2B9BE27A498D700CBD5E6 /* BaseLabel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -206,15 +236,93 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
-		E4A2B9A227A48B3700CBD5E6 /* Screens */ = {
+		E4A2B9A227A48B3700CBD5E6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E447B42E27A4858C003F9BB8 /* Map */,
+				E447B41D27A477F8003F9BB8 /* Splash */,
 				E447B42B27A484A5003F9BB8 /* Tabbar */,
 				E447B42327A47A58003F9BB8 /* VehicleList */,
-				E447B41D27A477F8003F9BB8 /* Splash */,
+				E447B42E27A4858C003F9BB8 /* Map */,
 			);
-			path = Screens;
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E4A2B9A327A48C7400CBD5E6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E4A2B9A427A48C8E00CBD5E6 /* UICollectionView+Extension.swift */,
+				E4A2B9AF27A4901200CBD5E6 /* Collection+Extension.swift */,
+				E4A2B9BA27A4969300CBD5E6 /* UICollectionViewCell+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E4A2B9A627A48CE100CBD5E6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E4A2B9A727A48CFC00CBD5E6 /* VehicleListCollectionViewCell.swift */,
+				E4A2B9A827A48CFC00CBD5E6 /* VehicleListCollectionViewCell.xib */,
+				E4A2B9B827A4951300CBD5E6 /* VehicleListCollectionViewCellViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E4A2B9B127A4913A00CBD5E6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E4A2B9B427A4916700CBD5E6 /* Views */,
+				E4A2B9B227A4914B00CBD5E6 /* LoadingShowable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E4A2B9B427A4916700CBD5E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4A2B9B527A4916C00CBD5E6 /* LoadingView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E4A2B9B527A4916C00CBD5E6 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				E4A2B9B627A4917800CBD5E6 /* LoadingView.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		E4A2B9C027A4AE4400CBD5E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E447B42427A47A6E003F9BB8 /* VehicleListViewController.swift */,
+				E447B42527A47A6E003F9BB8 /* VehicleListViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4A2B9C127A4AE5500CBD5E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E447B41B27A475E8003F9BB8 /* VehiclesResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4A2B9C227A4AE6400CBD5E6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E4A2B9AD27A48D8B00CBD5E6 /* VehicleListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E4A2B9C327A4AEB400CBD5E6 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				E447B41927A473AA003F9BB8 /* VehiclesEndpointItem.swift */,
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +437,7 @@
 				E447B42227A47822003F9BB8 /* SplashViewController.xib in Resources */,
 				E447B43227A485A1003F9BB8 /* MapViewController.xib in Resources */,
 				E447B3F027A46A9C003F9BB8 /* Assets.xcassets in Resources */,
+				E4A2B9AA27A48CFC00CBD5E6 /* VehicleListCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,13 +463,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				E447B41A27A473AA003F9BB8 /* VehiclesEndpointItem.swift in Sources */,
+				E4A2B9B027A4901200CBD5E6 /* Collection+Extension.swift in Sources */,
 				E447B41C27A475E8003F9BB8 /* VehiclesResponse.swift in Sources */,
+				E4A2B9B327A4914B00CBD5E6 /* LoadingShowable.swift in Sources */,
 				E447B42D27A4855E003F9BB8 /* MainTabBarController.swift in Sources */,
+				E4A2B9B727A4917800CBD5E6 /* LoadingView.swift in Sources */,
+				E4A2B9A927A48CFC00CBD5E6 /* VehicleListCollectionViewCell.swift in Sources */,
 				E447B3E727A46A9A003F9BB8 /* AppDelegate.swift in Sources */,
+				E4A2B9BB27A4969300CBD5E6 /* UICollectionViewCell+Extension.swift in Sources */,
+				E4A2B9BF27A498D700CBD5E6 /* BaseLabel.swift in Sources */,
+				E4A2B9AC27A48D1500CBD5E6 /* BaseCollectionViewCell.swift in Sources */,
 				E447B43127A485A1003F9BB8 /* MapViewController.swift in Sources */,
 				E447B42627A47A6E003F9BB8 /* VehicleListViewController.swift in Sources */,
+				E4A2B9A527A48C8E00CBD5E6 /* UICollectionView+Extension.swift in Sources */,
+				E4A2B9B927A4951300CBD5E6 /* VehicleListCollectionViewCellViewModel.swift in Sources */,
+				E4A2B9BD27A4973C00CBD5E6 /* BaseViewModel.swift in Sources */,
 				E447B3E927A46A9A003F9BB8 /* SceneDelegate.swift in Sources */,
 				E447B42A27A47A83003F9BB8 /* BaseViewController.swift in Sources */,
+				E4A2B9AE27A48D8B00CBD5E6 /* VehicleListViewModel.swift in Sources */,
 				E447B42127A47822003F9BB8 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

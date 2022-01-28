@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,14 +16,20 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dhx-JP-x1t">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </mapView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemPurpleColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="dhx-JP-x1t" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="06K-sJ-wTJ"/>
+                <constraint firstItem="dhx-JP-x1t" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QGh-J4-Kk9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dhx-JP-x1t" secondAttribute="trailing" id="TJQ-s3-Gwo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dhx-JP-x1t" secondAttribute="bottom" id="m7r-0b-1TE"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="83"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

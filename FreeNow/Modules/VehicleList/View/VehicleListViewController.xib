@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VehicleListViewController" customModule="FreeNow" customModuleProvider="target">
             <connections>
+                <outlet property="vehicleListCollectionView" destination="FYe-hM-Nv2" id="CsO-mE-OPY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,9 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FYe-hM-Nv2">
-                    <rect key="frame" x="76" y="206" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FYe-hM-Nv2">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g2Y-SI-Zdu">
                         <size key="itemSize" width="128" height="128"/>
@@ -31,16 +31,19 @@
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemYellowColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FYe-hM-Nv2" secondAttribute="trailing" id="BD2-3J-gBR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FYe-hM-Nv2" secondAttribute="bottom" id="Jdd-5q-mMx"/>
+                <constraint firstItem="FYe-hM-Nv2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="M0M-P4-pk0"/>
+                <constraint firstItem="FYe-hM-Nv2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jUs-ik-v8d"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="114"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

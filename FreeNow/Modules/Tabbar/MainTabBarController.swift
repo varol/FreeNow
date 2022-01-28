@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FreeNowCoreAPI
 
 extension MainTabbarController {
     fileprivate enum Constants {
@@ -24,15 +25,20 @@ final class MainTabbarController: UITabBarController {
         setupViewControllers()
     }
     
-    private func setupViewControllers() {
+    fileprivate func setupViewControllers() {
+        
+        let vehicleVC = VehicleListViewController()
+        vehicleVC.viewModel = VehicleListViewModel(networkManager: NetworkManager())
+        let firstItem = createNavController(for: vehicleVC,
+                                       title: NSLocalizedString(Constants.vehicleListTitle, comment: ""),
+                                       image: UIImage(systemName: Constants.vehicleListIcon)!)
+        
+        let secondItem = createNavController(for: MapViewController(),
+                                                            title: NSLocalizedString(Constants.mapTitle, comment: ""),
+                                                            image: UIImage(systemName: Constants.mapIcon)!)
 
         viewControllers = [
-            createNavController(for: VehicleListViewController(),
-                                   title: NSLocalizedString(Constants.vehicleListTitle, comment: ""),
-                                   image: UIImage(systemName: Constants.vehicleListIcon)!),
-            createNavController(for: MapViewController(),
-                                   title: NSLocalizedString(Constants.mapTitle, comment: ""),
-                                   image: UIImage(systemName: Constants.mapIcon)!)
+            firstItem, secondItem
         ]
     }
         
@@ -47,7 +53,7 @@ final class MainTabbarController: UITabBarController {
         return navController
     }
     
-    private func setupUI() {
+    fileprivate func setupUI() {
         view.backgroundColor = .systemBackground
         UITabBar.appearance().barTintColor = .systemBackground
         tabBar.tintColor = .label
