@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E434D4A827A5C20E00FACDE1 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E434D4A727A5C20E00FACDE1 /* BoundingBox.swift */; };
+		E434D4AA27A5C35300FACDE1 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E434D4A927A5C35200FACDE1 /* MapViewModel.swift */; };
+		E434D4AC27A5C80E00FACDE1 /* VehiclesRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E434D4AB27A5C80E00FACDE1 /* VehiclesRequestModel.swift */; };
+		E434D4AE27A5CDC700FACDE1 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E434D4AD27A5CDC700FACDE1 /* UIWindow+Extension.swift */; };
+		E434D4B027A5D88A00FACDE1 /* MapView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E434D4AF27A5D88A00FACDE1 /* MapView+Extension.swift */; };
 		E447B3E727A46A9A003F9BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B3E627A46A9A003F9BB8 /* AppDelegate.swift */; };
 		E447B3E927A46A9A003F9BB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B3E827A46A9A003F9BB8 /* SceneDelegate.swift */; };
 		E447B3F027A46A9C003F9BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E447B3EF27A46A9C003F9BB8 /* Assets.xcassets */; };
@@ -57,6 +62,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E434D4A727A5C20E00FACDE1 /* BoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
+		E434D4A927A5C35200FACDE1 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		E434D4AB27A5C80E00FACDE1 /* VehiclesRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesRequestModel.swift; sourceTree = "<group>"; };
+		E434D4AD27A5CDC700FACDE1 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		E434D4AF27A5D88A00FACDE1 /* MapView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapView+Extension.swift"; sourceTree = "<group>"; };
 		E447B3E327A46A9A003F9BB8 /* FreeNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E447B3E627A46A9A003F9BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E447B3E827A46A9A003F9BB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -232,6 +242,7 @@
 			children = (
 				E447B42F27A485A1003F9BB8 /* MapViewController.swift */,
 				E447B43027A485A1003F9BB8 /* MapViewController.xib */,
+				E434D4A927A5C35200FACDE1 /* MapViewModel.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -253,6 +264,8 @@
 				E4A2B9A427A48C8E00CBD5E6 /* UICollectionView+Extension.swift */,
 				E4A2B9AF27A4901200CBD5E6 /* Collection+Extension.swift */,
 				E4A2B9BA27A4969300CBD5E6 /* UICollectionViewCell+Extension.swift */,
+				E434D4AD27A5CDC700FACDE1 /* UIWindow+Extension.swift */,
+				E434D4AF27A5D88A00FACDE1 /* MapView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -272,6 +285,7 @@
 			children = (
 				E4A2B9B427A4916700CBD5E6 /* Views */,
 				E4A2B9B227A4914B00CBD5E6 /* LoadingShowable.swift */,
+				E434D4A727A5C20E00FACDE1 /* BoundingBox.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -321,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				E447B41927A473AA003F9BB8 /* VehiclesEndpointItem.swift */,
+				E434D4AB27A5C80E00FACDE1 /* VehiclesRequestModel.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -463,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E447B41A27A473AA003F9BB8 /* VehiclesEndpointItem.swift in Sources */,
+				E434D4B027A5D88A00FACDE1 /* MapView+Extension.swift in Sources */,
 				E4A2B9B027A4901200CBD5E6 /* Collection+Extension.swift in Sources */,
 				E447B41C27A475E8003F9BB8 /* VehiclesResponse.swift in Sources */,
 				E4A2B9B327A4914B00CBD5E6 /* LoadingShowable.swift in Sources */,
@@ -471,13 +487,17 @@
 				E4A2B9A927A48CFC00CBD5E6 /* VehicleListCollectionViewCell.swift in Sources */,
 				E447B3E727A46A9A003F9BB8 /* AppDelegate.swift in Sources */,
 				E4A2B9BB27A4969300CBD5E6 /* UICollectionViewCell+Extension.swift in Sources */,
+				E434D4A827A5C20E00FACDE1 /* BoundingBox.swift in Sources */,
 				E4A2B9BF27A498D700CBD5E6 /* BaseLabel.swift in Sources */,
 				E4A2B9AC27A48D1500CBD5E6 /* BaseCollectionViewCell.swift in Sources */,
 				E447B43127A485A1003F9BB8 /* MapViewController.swift in Sources */,
 				E447B42627A47A6E003F9BB8 /* VehicleListViewController.swift in Sources */,
 				E4A2B9A527A48C8E00CBD5E6 /* UICollectionView+Extension.swift in Sources */,
+				E434D4AC27A5C80E00FACDE1 /* VehiclesRequestModel.swift in Sources */,
 				E4A2B9B927A4951300CBD5E6 /* VehicleListCollectionViewCellViewModel.swift in Sources */,
+				E434D4AE27A5CDC700FACDE1 /* UIWindow+Extension.swift in Sources */,
 				E4A2B9BD27A4973C00CBD5E6 /* BaseViewModel.swift in Sources */,
+				E434D4AA27A5C35300FACDE1 /* MapViewModel.swift in Sources */,
 				E447B3E927A46A9A003F9BB8 /* SceneDelegate.swift in Sources */,
 				E447B42A27A47A83003F9BB8 /* BaseViewController.swift in Sources */,
 				E4A2B9AE27A48D8B00CBD5E6 /* VehicleListViewModel.swift in Sources */,
@@ -580,7 +600,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -635,7 +655,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -660,6 +680,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -688,6 +709,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

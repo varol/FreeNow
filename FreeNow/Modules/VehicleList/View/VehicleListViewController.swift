@@ -81,6 +81,7 @@ extension VehicleListViewController: VehicleListViewModelDelegate {
     }
     
     func prepareCollectionView() {
+        vehicleListCollectionView.backgroundColor = .white
         vehicleListCollectionView.dataSource = self
         vehicleListCollectionView.delegate = self
         vehicleListCollectionView.register(cellType: VehicleListCollectionViewCell.self)

@@ -6,19 +6,24 @@
 //
 
 import Foundation
+import CoreLocation
 
 // MARK: - Vehicles
 struct VehiclesResponse: Codable {
-    let poiList: [PoiList]?
+    let poiList: [Vehicle]?
 }
 
-// MARK: - PoiList
-struct PoiList: Codable {
+// MARK: - Vehicle
+struct Vehicle: Codable {
     let id: Int?
     let coordinate: Coordinate?
     let state: State?
     let type: TypeEnum?
     let heading: Double?
+    
+    public var coordinates: CLLocationCoordinate2D {
+      return CLLocationCoordinate2DMake(coordinate?.latitude ?? 0, coordinate?.longitude ?? 0)
+    }
 }
 
 // MARK: - Coordinate

@@ -9,25 +9,34 @@ import Foundation
 import FreeNowCoreAPI
 
 enum VehiclesEndpointItem: Endpoint {
-    case spesificLocation(p1Lat: String,
-                          p1Lon: String,
-                          p2Lat: String,
-                          p2Lon: String)
+    case spesificLocation(_ coordinates: VehiclesRequestModel)
+    case nearby(_ coordinates: VehiclesRequestModel)
 
-    var baseUrl: String { "https://poi-api.mytaxi.com/PoiService/poi/v1" }
+    var baseUrl: String { "https://poi-api.mytaxi.com/" }
     
     var path: String {
         switch self {
-        case .spesificLocation(let p1Lat,
-                               let p1Lon,
-                               let p2Lat,
-                               let p2Lon): return "?p1Lat=\(p1Lat)&p1Lon=\(p1Lon)&p2Lat=\(p2Lat)&p2Lon=\(p2Lon)"
+        case .spesificLocation, .nearby:
+            return "PoiService/poi/v1"
         }
     }
 
+    var parameters: [String : Any] {
+        switch self {
+        case .spesificLocation(let coordinates), .nearby(let coordinates):
+            return ["p1Lat": coordinates.p1Lat,
+                    "p1Lon": coordinates.p1Lon,
+                    "p2Lat": coordinates.p2Lat,
+                    "p2Lon": coordinates.p2Lon]
+        }
+    }
+    
     var method: HTTPMethod {
         switch self {
-        case .spesificLocation: return .get
+        case .spesificLocation:
+            return .get
+        case .nearby:
+            return .get
         }
     }
 }

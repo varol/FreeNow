@@ -32,8 +32,9 @@ final class MainTabbarController: UITabBarController {
         let firstItem = createNavController(for: vehicleVC,
                                        title: NSLocalizedString(Constants.vehicleListTitle, comment: ""),
                                        image: UIImage(systemName: Constants.vehicleListIcon)!)
-        
-        let secondItem = createNavController(for: MapViewController(),
+        let mapVC = MapViewController()
+        mapVC.viewModel = MapViewModel(networkManager: NetworkManager())
+        let secondItem = createNavController(for: mapVC,
                                                             title: NSLocalizedString(Constants.mapTitle, comment: ""),
                                                             image: UIImage(systemName: Constants.mapIcon)!)
 
@@ -54,9 +55,19 @@ final class MainTabbarController: UITabBarController {
     }
     
     fileprivate func setupUI() {
-        view.backgroundColor = .systemBackground
-        UITabBar.appearance().barTintColor = .systemBackground
-        tabBar.tintColor = .label
-        tabBar.backgroundColor = .white
+        view.backgroundColor = .darkGray
+        
+        UITabBar.appearance().barTintColor = .darkGray
+        tabBar.tintColor = .white
+        tabBar.backgroundColor = .darkGray
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.titleTextAttributes = [.foregroundColor : UIColor.white]
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .darkGray
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().prefersLargeTitles = false
     }
 }

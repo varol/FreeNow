@@ -24,10 +24,10 @@ protocol VehicleListCollectionViewCellViewModelDelegate: AnyObject {
 }
 
 final class VehicleListCollectionViewCellViewModel: BaseViewModel {
-    private let vehicle: PoiList
+    private let vehicle: Vehicle
     weak var delegate: VehicleListCollectionViewCellViewModelDelegate?
 
-    init(vehicle: PoiList) {
+    init(vehicle: Vehicle) {
         self.vehicle = vehicle
     }
 

@@ -11,10 +11,10 @@ import FreeNowCoreAPI
 extension VehicleListViewModel {
     fileprivate enum Constants {
         enum Coordinates {
-            static let p1Lat: String = "53.694865"
-            static let p1Lon: String = "9.757589"
-            static let p2Lat: String = "53.394655"
-            static let p2Lon: String = "10.099891"
+            static let hamburgCoordinates: VehiclesRequestModel = VehiclesRequestModel(p1Lat: "53.694865",
+                                                                                       p1Lon: "9.757589",
+                                                                                       p2Lat: "53.394655",
+                                                                                       p2Lon: "10.099891")
         }
         
         enum UI {
@@ -35,7 +35,7 @@ protocol VehicleListViewModelProtocol {
     var layoutGroupCount: Int { get }
     
     func load()
-    func vehicles(_ index: Int) -> PoiList?
+    func vehicles(_ index: Int) -> Vehicle?
     func pullToRefresh()
 }
 
@@ -49,7 +49,7 @@ protocol VehicleListViewModelDelegate: AnyObject {
 }
 
 final class VehicleListViewModel: BaseViewModel {
-    private var vehicles: [PoiList] = []
+    private var vehicles: [Vehicle] = []
     let networkManager: NetworkManager<VehiclesEndpointItem>
     weak var delegate: VehicleListViewModelDelegate?
 
@@ -57,15 +57,9 @@ final class VehicleListViewModel: BaseViewModel {
         self.networkManager = networkManager
     }
     
-    fileprivate func fetchVehicles(p1Lat: String = Constants.Coordinates.p1Lat,
-                                   p1Lon: String = Constants.Coordinates.p1Lon,
-                                   p2Lat: String = Constants.Coordinates.p2Lat,
-                                   p2Lon: String = Constants.Coordinates.p2Lon) {
+    fileprivate func fetchVehicles(_ coordinates: VehiclesRequestModel = Constants.Coordinates.hamburgCoordinates) {
         
-        networkManager.request(endpoint: .spesificLocation(p1Lat: p1Lat,
-                                                           p1Lon: p1Lon,
-                                                           p2Lat: p2Lat,
-                                                           p2Lon: p2Lon),
+        networkManager.request(endpoint: .spesificLocation(coordinates),
                                type: VehiclesResponse.self) {[weak self] result in
             guard let self = self else { return }
             self.delegate?.hideLoadingView()
@@ -113,12 +107,11 @@ extension VehicleListViewModel: VehicleListViewModelProtocol {
         fetchVehicles()
     }
     
-    func vehicles(_ index: Int) -> PoiList? {
+    func vehicles(_ index: Int) -> Vehicle? {
         vehicles[safe: index]
     }
     
     func pullToRefresh() {
         fetchVehicles()
     }
-    
 }
