@@ -90,19 +90,21 @@ extension VehicleListViewController: VehicleListViewModelDelegate {
     }
     
     fileprivate func handleCompositionalLayout() {
-        let size = NSCollectionLayoutSize(
-            widthDimension: NSCollectionLayoutDimension.fractionalWidth(viewModel.widthDimension),
-            heightDimension: NSCollectionLayoutDimension.estimated(viewModel.heightDimension)
-        )
-        
-        let item = NSCollectionLayoutItem(layoutSize: size)
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: size,
-                                                       subitem: item,
-                                                       count: viewModel.layoutGroupCount)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        
-        let layout = UICollectionViewCompositionalLayout(section: section)
-        vehicleListCollectionView.collectionViewLayout = layout
+        if #available(iOS 13.0, *) {
+            let size = NSCollectionLayoutSize(
+                widthDimension: NSCollectionLayoutDimension.fractionalWidth(viewModel.widthDimension),
+                heightDimension: NSCollectionLayoutDimension.estimated(viewModel.heightDimension)
+            )
+            
+            let item = NSCollectionLayoutItem(layoutSize: size)
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: size,
+                                                           subitem: item,
+                                                           count: viewModel.layoutGroupCount)
+            
+            let section = NSCollectionLayoutSection(group: group)
+            
+            let layout = UICollectionViewCompositionalLayout(section: section)
+            vehicleListCollectionView.collectionViewLayout = layout
+        }
     }
 }

@@ -61,6 +61,7 @@ final class VehicleListViewModel: BaseViewModel {
         
         networkManager.request(endpoint: .spesificLocation(coordinates),
                                type: VehiclesResponse.self) {[weak self] result in
+            
             guard let self = self else { return }
             self.delegate?.hideLoadingView()
 
@@ -104,6 +105,7 @@ extension VehicleListViewModel: VehicleListViewModelProtocol {
     func load() {
         delegate?.prepareCollectionView()
         delegate?.addRefreshControl()
+        delegate?.showLoadingView()
         fetchVehicles()
     }
     

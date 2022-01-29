@@ -25,20 +25,19 @@ final class VehicleListCollectionViewCell: BaseCollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupUI()
     }
-
-    private func setupUI() {
-
+    
+    override func prepareForReuse() {
+        idLabel.text = nil
+        latitudeLabel.text = nil
+        longitudeLabel.text = nil
+        stateLabel.text = nil
+        typeLabel.text = nil
+        headingLabel.text = nil
     }
-
 }
 
 extension VehicleListCollectionViewCell: VehicleListCollectionViewCellViewModelDelegate {
-    func prepareShadow() {
-        
-    }
-    
     func setIdLabel(_ text: String) {
         idLabel.text = text
     }

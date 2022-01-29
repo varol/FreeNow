@@ -13,7 +13,8 @@ extension MapViewModel {
     fileprivate enum Constants {
         static let hamburgCoordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 53.694865,
                                                                                               longitude: 9.757589)
-        static let coordinateSpan: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+        static let coordinateSpan: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.5,
+                                                                       longitudeDelta: 0.5)
     }
 }
 
@@ -46,17 +47,18 @@ final class MapViewModel: BaseViewModel {
     internal func fetchVehicles(_ mapRegion: MKMapRect) {
         networkManager.request(endpoint: .nearby(getVehicleRequestModel(mapRegion)),
                                type: VehiclesResponse.self) { [weak self] result in
+            
             guard let self = self else { return }
+            self.delegate?.hideLoadingView()
+            
             switch result {
             case .success(let response):
                 if let vehicles = response.poiList {
                     self.vehicles = vehicles
                     self.addAnnotation(with: vehicles)
                 }
-                self.delegate?.hideLoadingView()
             case .failure(let error):
                 print(error)
-                self.delegate?.hideLoadingView()
             }
         }
     }
@@ -74,6 +76,7 @@ final class MapViewModel: BaseViewModel {
         vehicles.forEach { vehicle in
             let annotation = MKPointAnnotation()
             annotation.coordinate = vehicle.coordinates
+            annotation.title = "\(vehicle.id ?? 0)"
             self.delegate?.addAnnotations(annotation)
         }
     }
