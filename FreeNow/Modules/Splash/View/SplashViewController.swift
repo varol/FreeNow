@@ -9,12 +9,32 @@ import UIKit
 
 final class SplashViewController: BaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigateToVehicleListScreen()
+    var viewModel: SplashViewModel! {
+        didSet {
+            viewModel.delegate = self
+        }
     }
 
-    fileprivate func navigateToVehicleListScreen() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel.load()
+    }
+}
+
+extension SplashViewController: SplashViewModelDelegate {
+    func showLoadingView() {
+        showLoading()
+    }
+    
+    func hideLoadingView() {
+        hideLoading()
+    }
+    
+    func prepareSplashView() {
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    func navigateToVehicleListScreen() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             let tabBar = MainTabbarController()
             tabBar.modalPresentationStyle = .fullScreen

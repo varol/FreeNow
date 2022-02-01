@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E432896627A85D4E00BB0A0E /* VehicleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E432896527A85D4E00BB0A0E /* VehicleListViewModelTests.swift */; };
+		E432896B27A8752F00BB0A0E /* VehiclesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E432896A27A8752F00BB0A0E /* VehiclesResponse.json */; };
+		E432896D27A878C800BB0A0E /* MockVehicleListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E432896C27A878C800BB0A0E /* MockVehicleListViewModelDelegate.swift */; };
+		E432896F27A87EFD00BB0A0E /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E432896E27A87EFD00BB0A0E /* MockNetworkManager.swift */; };
 		E434D4A827A5C20E00FACDE1 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E434D4A727A5C20E00FACDE1 /* BoundingBox.swift */; };
 		E434D4AA27A5C35300FACDE1 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E434D4A927A5C35200FACDE1 /* MapViewModel.swift */; };
 		E434D4AC27A5C80E00FACDE1 /* VehiclesRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E434D4AB27A5C80E00FACDE1 /* VehiclesRequestModel.swift */; };
 		E434D4AE27A5CDC700FACDE1 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E434D4AD27A5CDC700FACDE1 /* UIWindow+Extension.swift */; };
+		E434D4B327A7D74900FACDE1 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E434D4B227A7D74900FACDE1 /* SplashViewModel.swift */; };
 		E447B3E727A46A9A003F9BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B3E627A46A9A003F9BB8 /* AppDelegate.swift */; };
 		E447B3E927A46A9A003F9BB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B3E827A46A9A003F9BB8 /* SceneDelegate.swift */; };
 		E447B3F027A46A9C003F9BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E447B3EF27A46A9C003F9BB8 /* Assets.xcassets */; };
@@ -29,6 +34,7 @@
 		E447B42D27A4855E003F9BB8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B42C27A4855E003F9BB8 /* MainTabBarController.swift */; };
 		E447B43127A485A1003F9BB8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B42F27A485A1003F9BB8 /* MapViewController.swift */; };
 		E447B43227A485A1003F9BB8 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E447B43027A485A1003F9BB8 /* MapViewController.xib */; };
+		E47578F427A9568E003A64FC /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47578F327A9568E003A64FC /* ApiService.swift */; };
 		E4A2B9A527A48C8E00CBD5E6 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A2B9A427A48C8E00CBD5E6 /* UICollectionView+Extension.swift */; };
 		E4A2B9A927A48CFC00CBD5E6 /* VehicleListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A2B9A727A48CFC00CBD5E6 /* VehicleListCollectionViewCell.swift */; };
 		E4A2B9AA27A48CFC00CBD5E6 /* VehicleListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A2B9A827A48CFC00CBD5E6 /* VehicleListCollectionViewCell.xib */; };
@@ -61,10 +67,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E432896527A85D4E00BB0A0E /* VehicleListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListViewModelTests.swift; sourceTree = "<group>"; };
+		E432896A27A8752F00BB0A0E /* VehiclesResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = VehiclesResponse.json; path = ../../../../Downloads/VehiclesResponse.json; sourceTree = "<group>"; };
+		E432896C27A878C800BB0A0E /* MockVehicleListViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVehicleListViewModelDelegate.swift; sourceTree = "<group>"; };
+		E432896E27A87EFD00BB0A0E /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 		E434D4A727A5C20E00FACDE1 /* BoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
 		E434D4A927A5C35200FACDE1 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		E434D4AB27A5C80E00FACDE1 /* VehiclesRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesRequestModel.swift; sourceTree = "<group>"; };
 		E434D4AD27A5CDC700FACDE1 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		E434D4B227A7D74900FACDE1 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		E447B3E327A46A9A003F9BB8 /* FreeNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E447B3E627A46A9A003F9BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E447B3E827A46A9A003F9BB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +97,7 @@
 		E447B42C27A4855E003F9BB8 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E447B42F27A485A1003F9BB8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E447B43027A485A1003F9BB8 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		E47578F327A9568E003A64FC /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		E4A2B9A427A48C8E00CBD5E6 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		E4A2B9A727A48CFC00CBD5E6 /* VehicleListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListCollectionViewCell.swift; sourceTree = "<group>"; };
 		E4A2B9A827A48CFC00CBD5E6 /* VehicleListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleListCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -126,6 +138,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E432896927A8609900BB0A0E /* VehicleList */ = {
+			isa = PBXGroup;
+			children = (
+				E432896527A85D4E00BB0A0E /* VehicleListViewModelTests.swift */,
+				E432896C27A878C800BB0A0E /* MockVehicleListViewModelDelegate.swift */,
+				E432896E27A87EFD00BB0A0E /* MockNetworkManager.swift */,
+			);
+			path = VehicleList;
+			sourceTree = "<group>";
+		};
+		E434D4B127A7D73900FACDE1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E434D4B227A7D74900FACDE1 /* SplashViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E434D4B427A7D92C00FACDE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E447B41F27A47822003F9BB8 /* SplashViewController.swift */,
+				E447B42027A47822003F9BB8 /* SplashViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E434D4B527A7D94000FACDE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E4A2B9A727A48CFC00CBD5E6 /* VehicleListCollectionViewCell.swift */,
+				E4A2B9A827A48CFC00CBD5E6 /* VehicleListCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E434D4B627A7D94800FACDE1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E4A2B9B827A4951300CBD5E6 /* VehicleListCollectionViewCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E434D4B727A7D95400FACDE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E447B42F27A485A1003F9BB8 /* MapViewController.swift */,
+				E447B43027A485A1003F9BB8 /* MapViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E434D4B827A7D95A00FACDE1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E434D4A927A5C35200FACDE1 /* MapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		E447B3DA27A46A9A003F9BB8 = {
 			isa = PBXGroup;
 			children = (
@@ -151,10 +224,10 @@
 			isa = PBXGroup;
 			children = (
 				E447B41E27A477FE003F9BB8 /* App */,
-				E4A2B9C327A4AEB400CBD5E6 /* Endpoints */,
 				E4A2B9B127A4913A00CBD5E6 /* Utils */,
 				E4A2B9A327A48C7400CBD5E6 /* Extensions */,
 				E447B42827A47A77003F9BB8 /* Base */,
+				E47578F227A9567D003A64FC /* Service */,
 				E4A2B9A227A48B3700CBD5E6 /* Modules */,
 				E447B3EF27A46A9C003F9BB8 /* Assets.xcassets */,
 				E447B3F127A46A9C003F9BB8 /* LaunchScreen.storyboard */,
@@ -166,7 +239,9 @@
 		E447B3FC27A46A9D003F9BB8 /* FreeNowTests */ = {
 			isa = PBXGroup;
 			children = (
+				E432896A27A8752F00BB0A0E /* VehiclesResponse.json */,
 				E447B3FD27A46A9D003F9BB8 /* FreeNowTests.swift */,
+				E432896927A8609900BB0A0E /* VehicleList */,
 			);
 			path = FreeNowTests;
 			sourceTree = "<group>";
@@ -190,8 +265,8 @@
 		E447B41D27A477F8003F9BB8 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				E447B41F27A47822003F9BB8 /* SplashViewController.swift */,
-				E447B42027A47822003F9BB8 /* SplashViewController.xib */,
+				E434D4B127A7D73900FACDE1 /* ViewModel */,
+				E434D4B427A7D92C00FACDE1 /* View */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -238,11 +313,28 @@
 		E447B42E27A4858C003F9BB8 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				E447B42F27A485A1003F9BB8 /* MapViewController.swift */,
-				E447B43027A485A1003F9BB8 /* MapViewController.xib */,
-				E434D4A927A5C35200FACDE1 /* MapViewModel.swift */,
+				E434D4B727A7D95400FACDE1 /* View */,
+				E434D4B827A7D95A00FACDE1 /* ViewModel */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		E47578F227A9567D003A64FC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E47578F827A99E0F003A64FC /* RequestModels */,
+				E4A2B9C327A4AEB400CBD5E6 /* Endpoints */,
+				E47578F327A9568E003A64FC /* ApiService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E47578F827A99E0F003A64FC /* RequestModels */ = {
+			isa = PBXGroup;
+			children = (
+				E434D4AB27A5C80E00FACDE1 /* VehiclesRequestModel.swift */,
+			);
+			path = RequestModels;
 			sourceTree = "<group>";
 		};
 		E4A2B9A227A48B3700CBD5E6 /* Modules */ = {
@@ -270,9 +362,8 @@
 		E4A2B9A627A48CE100CBD5E6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E4A2B9A727A48CFC00CBD5E6 /* VehicleListCollectionViewCell.swift */,
-				E4A2B9A827A48CFC00CBD5E6 /* VehicleListCollectionViewCell.xib */,
-				E4A2B9B827A4951300CBD5E6 /* VehicleListCollectionViewCellViewModel.swift */,
+				E434D4B527A7D94000FACDE1 /* View */,
+				E434D4B627A7D94800FACDE1 /* ViewModel */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -332,7 +423,6 @@
 			isa = PBXGroup;
 			children = (
 				E447B41927A473AA003F9BB8 /* VehiclesEndpointItem.swift */,
-				E434D4AB27A5C80E00FACDE1 /* VehiclesRequestModel.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -457,6 +547,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E432896B27A8752F00BB0A0E /* VehiclesResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +565,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E434D4B327A7D74900FACDE1 /* SplashViewModel.swift in Sources */,
 				E447B41A27A473AA003F9BB8 /* VehiclesEndpointItem.swift in Sources */,
 				E4A2B9B027A4901200CBD5E6 /* Collection+Extension.swift in Sources */,
 				E447B41C27A475E8003F9BB8 /* VehiclesResponse.swift in Sources */,
@@ -493,6 +585,7 @@
 				E4A2B9B927A4951300CBD5E6 /* VehicleListCollectionViewCellViewModel.swift in Sources */,
 				E434D4AE27A5CDC700FACDE1 /* UIWindow+Extension.swift in Sources */,
 				E4A2B9BD27A4973C00CBD5E6 /* BaseViewModel.swift in Sources */,
+				E47578F427A9568E003A64FC /* ApiService.swift in Sources */,
 				E434D4AA27A5C35300FACDE1 /* MapViewModel.swift in Sources */,
 				E447B3E927A46A9A003F9BB8 /* SceneDelegate.swift in Sources */,
 				E447B42A27A47A83003F9BB8 /* BaseViewController.swift in Sources */,
@@ -506,6 +599,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E447B3FE27A46A9D003F9BB8 /* FreeNowTests.swift in Sources */,
+				E432896627A85D4E00BB0A0E /* VehicleListViewModelTests.swift in Sources */,
+				E432896F27A87EFD00BB0A0E /* MockNetworkManager.swift in Sources */,
+				E432896D27A878C800BB0A0E /* MockVehicleListViewModelDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,7 +767,6 @@
 				DEVELOPMENT_TEAM = GDP6Y3828G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FreeNow/Info.plist;
-				INFOPLIST_KEY_NSMainNibFile = SplashViewController;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -700,7 +795,6 @@
 				DEVELOPMENT_TEAM = GDP6Y3828G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FreeNow/Info.plist;
-				INFOPLIST_KEY_NSMainNibFile = SplashViewController;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

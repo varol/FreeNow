@@ -28,10 +28,11 @@ final class MainTabbarController: UITabBarController {
     fileprivate func setupViewControllers() {
         
         let vehicleVC = VehicleListViewController()
-        vehicleVC.viewModel = VehicleListViewModel(networkManager: NetworkManager())
+        vehicleVC.viewModel = VehicleListViewModel()
         let firstItem = createNavController(for: vehicleVC,
                                        title: NSLocalizedString(Constants.vehicleListTitle, comment: ""),
                                        image: UIImage(named: Constants.vehicleListIcon)!)
+        
         let mapVC = MapViewController()
         mapVC.viewModel = MapViewModel(networkManager: NetworkManager())
         let secondItem = createNavController(for: mapVC,

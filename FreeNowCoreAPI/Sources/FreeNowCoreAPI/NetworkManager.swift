@@ -10,7 +10,7 @@ import Foundation
 
 public typealias Completion<T> = (Result<T, APIClientError>) -> Void where T: Decodable
 
-public final class NetworkManager<EndpointItem: Endpoint> {
+public class NetworkManager<EndpointItem: Endpoint> {
     public init() { }
     
     private var possibleEmptyResponseCodes: Set<Int> {

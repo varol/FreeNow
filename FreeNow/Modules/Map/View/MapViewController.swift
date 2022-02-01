@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-final class MapViewController: BaseViewController, LoadingShowable {
+final class MapViewController: BaseViewController {
     @IBOutlet private weak var mapView: MKMapView!
     
     var viewModel: MapViewModel! {

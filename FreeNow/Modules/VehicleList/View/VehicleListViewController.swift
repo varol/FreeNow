@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class VehicleListViewController: BaseViewController, LoadingShowable {
+final class VehicleListViewController: BaseViewController {
     @IBOutlet private weak var vehicleListCollectionView: UICollectionView!
 
     var viewModel: VehicleListViewModel! {
@@ -86,10 +86,11 @@ extension VehicleListViewController: VehicleListViewModelDelegate {
         vehicleListCollectionView.delegate = self
         vehicleListCollectionView.register(cellType: VehicleListCollectionViewCell.self)
         
-        handleCompositionalLayout()
+        handleLayout()
     }
     
-    fileprivate func handleCompositionalLayout() {
+    fileprivate func handleLayout() {
+        /// We can use CompositionalLayout after iOS 13,0 or newer version
         if #available(iOS 13.0, *) {
             let size = NSCollectionLayoutSize(
                 widthDimension: NSCollectionLayoutDimension.fractionalWidth(viewModel.widthDimension),
@@ -105,6 +106,10 @@ extension VehicleListViewController: VehicleListViewModelDelegate {
             
             let layout = UICollectionViewCompositionalLayout(section: section)
             vehicleListCollectionView.collectionViewLayout = layout
+        } else {
+            if let flowLayout = vehicleListCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+                flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+            }
         }
     }
 }

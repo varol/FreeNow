@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import FreeNowCoreAPI
 
 extension VehicleListViewModel {
     fileprivate enum Constants {
@@ -50,35 +49,34 @@ protocol VehicleListViewModelDelegate: AnyObject {
 
 final class VehicleListViewModel: BaseViewModel {
     private var vehicles: [Vehicle] = []
-    let networkManager: NetworkManager<VehiclesEndpointItem>
+    var apiService: APIServiceProtocol
     weak var delegate: VehicleListViewModelDelegate?
 
-    init(networkManager: NetworkManager<VehiclesEndpointItem>) {
-        self.networkManager = networkManager
+    init(apiService: APIServiceProtocol = APIService()) {
+        self.apiService = apiService
     }
-    
-    fileprivate func fetchVehicles(_ coordinates: VehiclesRequestModel = Constants.Coordinates.hamburgCoordinates) {
-        
-        networkManager.request(endpoint: .spesificLocation(coordinates),
-                               type: VehiclesResponse.self) {[weak self] result in
-            
-            guard let self = self else { return }
-            self.delegate?.hideLoadingView()
 
-            switch result {
-            case .success(let response):
-                if let vehicles = response.poiList {
-                    self.vehicles = vehicles
-                    self.delegate?.reloadData()
-                }
-                self.delegate?.endRefreshing()
-            case .failure(let error):
-                print(error)
-                self.delegate?.endRefreshing()
-            }
+    internal func fetchVehicles(_ coordinates: VehiclesRequestModel = Constants.Coordinates.hamburgCoordinates) {
+        apiService.fetchVehicles(coordinates: coordinates) {[weak self] result in
+            guard let self = self else { return }
+            self.handleVehicleResult(result: result)
         }
     }
-
+    
+    internal func handleVehicleResult(result: VehicleResult) {
+        self.delegate?.hideLoadingView()
+        switch result {
+        case .success(let response):
+            if let vehicles = response.poiList {
+                self.vehicles = vehicles
+                self.delegate?.reloadData()
+            }
+            self.delegate?.endRefreshing()
+        case .failure(let error):
+            print(error)
+            self.delegate?.endRefreshing()
+        }
+    }
 }
 
 extension VehicleListViewModel: VehicleListViewModelProtocol {

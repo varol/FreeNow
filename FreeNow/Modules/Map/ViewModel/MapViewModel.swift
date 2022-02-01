@@ -5,7 +5,6 @@
 //  Created by Varol Aksoy on 29.01.2022.
 //
 
-import UIKit
 import FreeNowCoreAPI
 import MapKit
 
