@@ -2,11 +2,10 @@
 //  FreeNowTests.swift
 //  FreeNowTests
 //
-//  Created by Varol Aksoy on 28.01.2022.
+//  Created by Varol Aksoy on 1.02.2022.
 //
 
 import XCTest
-@testable import FreeNow
 
 class FreeNowTests: XCTestCase {
 

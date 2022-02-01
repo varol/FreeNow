@@ -34,7 +34,7 @@ final class MainTabbarController: UITabBarController {
                                        image: UIImage(named: Constants.vehicleListIcon)!)
         
         let mapVC = MapViewController()
-        mapVC.viewModel = MapViewModel(networkManager: NetworkManager())
+        mapVC.viewModel = MapViewModel()
         let secondItem = createNavController(for: mapVC,
                                                             title: NSLocalizedString(Constants.mapTitle, comment: ""),
                                                             image: UIImage(named: Constants.carIcon)!)

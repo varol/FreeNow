@@ -5,7 +5,6 @@
 //  Created by Varol Aksoy on 29.01.2022.
 //
 
-import FreeNowCoreAPI
 import MapKit
 
 extension MapViewModel {
@@ -36,32 +35,35 @@ protocol MapViewModelDelegate: AnyObject {
 
 final class MapViewModel: BaseViewModel {
     private var vehicles: [Vehicle] = []
-    let networkManager: NetworkManager<VehiclesEndpointItem>
+    var apiService: APIServiceProtocol
     weak var delegate: MapViewModelDelegate?
 
-    init(networkManager: NetworkManager<VehiclesEndpointItem>) {
-        self.networkManager = networkManager
+    init(apiService: APIServiceProtocol = APIService()) {
+        self.apiService = apiService
     }
-    
+
     internal func fetchVehicles(_ mapRegion: MKMapRect) {
-        networkManager.request(endpoint: .nearby(getVehicleRequestModel(mapRegion)),
-                               type: VehiclesResponse.self) { [weak self] result in
-            
+        
+        apiService.fetchNearbyVehicles(coordinates: getVehicleRequestModel(mapRegion)) {[weak self] result in
             guard let self = self else { return }
-            self.delegate?.hideLoadingView()
-            
-            switch result {
-            case .success(let response):
-                if let vehicles = response.poiList {
-                    self.vehicles = vehicles
-                    self.addAnnotation(with: vehicles)
-                }
-            case .failure(let error):
-                print(error)
-            }
+            self.handleVehicleResult(result: result)
         }
     }
     
+    internal func handleVehicleResult(result: VehicleResult) {
+        self.delegate?.hideLoadingView()
+        
+        switch result {
+        case .success(let response):
+            if let vehicles = response.poiList {
+                self.vehicles = vehicles
+                self.addAnnotation(with: vehicles)
+            }
+        case .failure(let error):
+            print(error)
+        }
+    }
+
     internal func getVehicleRequestModel(_ mapRegion: MKMapRect) -> VehiclesRequestModel {
         let boundingBox = BoundingBox(rect: mapRegion)
         let requestModel = VehiclesRequestModel(p1Lat: String(boundingBox.min.latitude),

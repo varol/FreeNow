@@ -26,4 +26,21 @@ final class MockApiService: APIServiceProtocol {
             completion(result.0)
         }
     }
+
+    var invokedFetchNearbyVehicles = false
+    var invokedFetchNearbyVehiclesCount = 0
+    var invokedFetchNearbyVehiclesParameters: (coordinates: VehiclesRequestModel, Void)?
+    var invokedFetchNearbyVehiclesParametersList = [(coordinates: VehiclesRequestModel, Void)]()
+    var stubbedFetchNearbyVehiclesCompletionResult: (VehicleResult, Void)?
+
+    func fetchNearbyVehicles(coordinates: VehiclesRequestModel,
+        completion: @escaping ((VehicleResult) -> Void)) {
+        invokedFetchNearbyVehicles = true
+        invokedFetchNearbyVehiclesCount += 1
+        invokedFetchNearbyVehiclesParameters = (coordinates, ())
+        invokedFetchNearbyVehiclesParametersList.append((coordinates, ()))
+        if let result = stubbedFetchNearbyVehiclesCompletionResult {
+            completion(result.0)
+        }
+    }
 }

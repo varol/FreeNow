@@ -20,7 +20,6 @@
 		E447B3E927A46A9A003F9BB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B3E827A46A9A003F9BB8 /* SceneDelegate.swift */; };
 		E447B3F027A46A9C003F9BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E447B3EF27A46A9C003F9BB8 /* Assets.xcassets */; };
 		E447B3F327A46A9C003F9BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E447B3F127A46A9C003F9BB8 /* LaunchScreen.storyboard */; };
-		E447B3FE27A46A9D003F9BB8 /* FreeNowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B3FD27A46A9D003F9BB8 /* FreeNowTests.swift */; };
 		E447B40827A46A9D003F9BB8 /* FreeNowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B40727A46A9D003F9BB8 /* FreeNowUITests.swift */; };
 		E447B40A27A46A9D003F9BB8 /* FreeNowUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B40927A46A9D003F9BB8 /* FreeNowUITestsLaunchTests.swift */; };
 		E447B41827A47270003F9BB8 /* FreeNowCoreAPI in Frameworks */ = {isa = PBXBuildFile; productRef = E447B41727A47270003F9BB8 /* FreeNowCoreAPI */; };
@@ -35,6 +34,9 @@
 		E447B43127A485A1003F9BB8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447B42F27A485A1003F9BB8 /* MapViewController.swift */; };
 		E447B43227A485A1003F9BB8 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E447B43027A485A1003F9BB8 /* MapViewController.xib */; };
 		E47578F427A9568E003A64FC /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47578F327A9568E003A64FC /* ApiService.swift */; };
+		E47578FB27A9A587003A64FC /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47578FA27A9A587003A64FC /* MapViewModelTests.swift */; };
+		E47578FD27A9A5DA003A64FC /* MockMapViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47578FC27A9A5DA003A64FC /* MockMapViewModelDelegate.swift */; };
+		E47578FF27A9A947003A64FC /* FreeNowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47578FE27A9A947003A64FC /* FreeNowTests.swift */; };
 		E4A2B9A527A48C8E00CBD5E6 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A2B9A427A48C8E00CBD5E6 /* UICollectionView+Extension.swift */; };
 		E4A2B9A927A48CFC00CBD5E6 /* VehicleListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A2B9A727A48CFC00CBD5E6 /* VehicleListCollectionViewCell.swift */; };
 		E4A2B9AA27A48CFC00CBD5E6 /* VehicleListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A2B9A827A48CFC00CBD5E6 /* VehicleListCollectionViewCell.xib */; };
@@ -83,7 +85,6 @@
 		E447B3F227A46A9C003F9BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E447B3F427A46A9C003F9BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E447B3F927A46A9D003F9BB8 /* FreeNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E447B3FD27A46A9D003F9BB8 /* FreeNowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeNowTests.swift; sourceTree = "<group>"; };
 		E447B40327A46A9D003F9BB8 /* FreeNowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeNowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E447B40727A46A9D003F9BB8 /* FreeNowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeNowUITests.swift; sourceTree = "<group>"; };
 		E447B40927A46A9D003F9BB8 /* FreeNowUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeNowUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -98,6 +99,9 @@
 		E447B42F27A485A1003F9BB8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E447B43027A485A1003F9BB8 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		E47578F327A9568E003A64FC /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		E47578FA27A9A587003A64FC /* MapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
+		E47578FC27A9A5DA003A64FC /* MockMapViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapViewModelDelegate.swift; sourceTree = "<group>"; };
+		E47578FE27A9A947003A64FC /* FreeNowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeNowTests.swift; sourceTree = "<group>"; };
 		E4A2B9A427A48C8E00CBD5E6 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		E4A2B9A727A48CFC00CBD5E6 /* VehicleListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListCollectionViewCell.swift; sourceTree = "<group>"; };
 		E4A2B9A827A48CFC00CBD5E6 /* VehicleListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleListCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -143,7 +147,6 @@
 			children = (
 				E432896527A85D4E00BB0A0E /* VehicleListViewModelTests.swift */,
 				E432896C27A878C800BB0A0E /* MockVehicleListViewModelDelegate.swift */,
-				E432896E27A87EFD00BB0A0E /* MockNetworkManager.swift */,
 			);
 			path = VehicleList;
 			sourceTree = "<group>";
@@ -224,10 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				E447B41E27A477FE003F9BB8 /* App */,
-				E4A2B9B127A4913A00CBD5E6 /* Utils */,
-				E4A2B9A327A48C7400CBD5E6 /* Extensions */,
-				E447B42827A47A77003F9BB8 /* Base */,
 				E47578F227A9567D003A64FC /* Service */,
+				E475790027A9A999003A64FC /* Resources */,
 				E4A2B9A227A48B3700CBD5E6 /* Modules */,
 				E447B3EF27A46A9C003F9BB8 /* Assets.xcassets */,
 				E447B3F127A46A9C003F9BB8 /* LaunchScreen.storyboard */,
@@ -239,9 +240,11 @@
 		E447B3FC27A46A9D003F9BB8 /* FreeNowTests */ = {
 			isa = PBXGroup;
 			children = (
+				E47578FE27A9A947003A64FC /* FreeNowTests.swift */,
+				E432896E27A87EFD00BB0A0E /* MockNetworkManager.swift */,
 				E432896A27A8752F00BB0A0E /* VehiclesResponse.json */,
-				E447B3FD27A46A9D003F9BB8 /* FreeNowTests.swift */,
 				E432896927A8609900BB0A0E /* VehicleList */,
+				E47578F927A99F1E003A64FC /* Map */,
 			);
 			path = FreeNowTests;
 			sourceTree = "<group>";
@@ -335,6 +338,25 @@
 				E434D4AB27A5C80E00FACDE1 /* VehiclesRequestModel.swift */,
 			);
 			path = RequestModels;
+			sourceTree = "<group>";
+		};
+		E47578F927A99F1E003A64FC /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				E47578FA27A9A587003A64FC /* MapViewModelTests.swift */,
+				E47578FC27A9A5DA003A64FC /* MockMapViewModelDelegate.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		E475790027A9A999003A64FC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E447B42827A47A77003F9BB8 /* Base */,
+				E4A2B9A327A48C7400CBD5E6 /* Extensions */,
+				E4A2B9B127A4913A00CBD5E6 /* Utils */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		E4A2B9A227A48B3700CBD5E6 /* Modules */ = {
@@ -598,9 +620,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E447B3FE27A46A9D003F9BB8 /* FreeNowTests.swift in Sources */,
+				E47578FF27A9A947003A64FC /* FreeNowTests.swift in Sources */,
+				E47578FD27A9A5DA003A64FC /* MockMapViewModelDelegate.swift in Sources */,
 				E432896627A85D4E00BB0A0E /* VehicleListViewModelTests.swift in Sources */,
 				E432896F27A87EFD00BB0A0E /* MockNetworkManager.swift in Sources */,
+				E47578FB27A9A587003A64FC /* MapViewModelTests.swift in Sources */,
 				E432896D27A878C800BB0A0E /* MockVehicleListViewModelDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
