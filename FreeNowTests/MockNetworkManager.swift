@@ -14,16 +14,16 @@ final class MockApiService: APIServiceProtocol {
     var invokedFetchVehiclesCount = 0
     var invokedFetchVehiclesParameters: (coordinates: VehiclesRequestModel, Void)?
     var invokedFetchVehiclesParametersList = [(coordinates: VehiclesRequestModel, Void)]()
-    var stubbedFetchVehiclesCompletionResult: (VehicleResult, Void)?
+    var stubbedFetchVehiclesCompletionResult: ([Vehicle]?, NSError?)?
 
     func fetchVehicles(coordinates: VehiclesRequestModel,
-        completion: @escaping ((VehicleResult) -> Void)) {
+        completion: @escaping (([Vehicle]?, NSError?) -> Void)) {
         invokedFetchVehicles = true
         invokedFetchVehiclesCount += 1
         invokedFetchVehiclesParameters = (coordinates, ())
         invokedFetchVehiclesParametersList.append((coordinates, ()))
         if let result = stubbedFetchVehiclesCompletionResult {
-            completion(result.0)
+            completion(result.0, result.1)
         }
     }
 
@@ -31,16 +31,16 @@ final class MockApiService: APIServiceProtocol {
     var invokedFetchNearbyVehiclesCount = 0
     var invokedFetchNearbyVehiclesParameters: (coordinates: VehiclesRequestModel, Void)?
     var invokedFetchNearbyVehiclesParametersList = [(coordinates: VehiclesRequestModel, Void)]()
-    var stubbedFetchNearbyVehiclesCompletionResult: (VehicleResult, Void)?
+    var stubbedFetchNearbyVehiclesCompletionResult: ([Vehicle]?, NSError?)?
 
     func fetchNearbyVehicles(coordinates: VehiclesRequestModel,
-        completion: @escaping ((VehicleResult) -> Void)) {
+        completion: @escaping (([Vehicle]?, NSError?) -> Void)) {
         invokedFetchNearbyVehicles = true
         invokedFetchNearbyVehiclesCount += 1
         invokedFetchNearbyVehiclesParameters = (coordinates, ())
         invokedFetchNearbyVehiclesParametersList.append((coordinates, ()))
         if let result = stubbedFetchNearbyVehiclesCompletionResult {
-            completion(result.0)
+            completion(result.0, result.1)
         }
     }
 }

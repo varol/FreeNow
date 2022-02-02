@@ -19,10 +19,7 @@ extension VehicleListViewModelTests {
         }
         
         enum UI {
-            static let cellPadding: Double = 16
-            static let widthDimension: Double = 1
-            static let heightDimension: Double = 44
-            static let layoutGroupCount: Int = 1
+            static let heightDimension: Double = 177
         }
     }
 }
@@ -41,20 +38,8 @@ class VehicleListViewModelTests: XCTestCase {
         sut.apiService = mockApiService
     }
 
-    func test_WidthDimension() {
-        XCTAssertEqual(sut.widthDimension, Constants.UI.widthDimension)
-    }
-    
     func test_HeightDimension() {
         XCTAssertEqual(sut.heightDimension, Constants.UI.heightDimension)
-    }
-
-    func test_LayoutGroupCount() {
-        XCTAssertEqual(sut.layoutGroupCount, Constants.UI.layoutGroupCount)
-    }
-
-    func test_CellPadding() {
-        XCTAssertEqual(sut.cellPadding, Constants.UI.cellPadding)
     }
 
     func test_NumberOfItems() {
@@ -63,18 +48,10 @@ class VehicleListViewModelTests: XCTestCase {
 
     func test_HandleResultWıthSuccessResponse() {
         XCTAssertEqual(sut.numberOfItems, 0)
-        sut.handleVehicleResult(result: .success(.response))
+        sut.handleVehicleResult(vehicles: VehiclesResponse.response.poiList, error: NSError.init())
         XCTAssertEqual(sut.numberOfItems, 121)
     }
     
-    func test_HandleResultWıthFailure() {
-        XCTAssertFalse(mockVehicleListViewModelDelegate.invokedEndRefreshing)
-        XCTAssertEqual(mockVehicleListViewModelDelegate.invokedEndRefreshingCount, 0)
-        sut.handleVehicleResult(result: .failure(.timeout))
-        XCTAssertTrue(mockVehicleListViewModelDelegate.invokedEndRefreshing)
-        XCTAssertEqual(mockVehicleListViewModelDelegate.invokedEndRefreshingCount, 1)
-    }
-
     func test_ShowLoading() {
         XCTAssertFalse(mockVehicleListViewModelDelegate.invokedShowLoadingView)
         XCTAssertEqual(mockVehicleListViewModelDelegate.invokedShowLoadingViewCount, 0)
@@ -86,7 +63,7 @@ class VehicleListViewModelTests: XCTestCase {
     func test_HideLoading() {
         XCTAssertFalse(mockVehicleListViewModelDelegate.invokedHideLoadingView)
         XCTAssertEqual(mockVehicleListViewModelDelegate.invokedHideLoadingViewCount, 0)
-        sut.handleVehicleResult(result: .success(.response))
+        sut.handleVehicleResult(vehicles: VehiclesResponse.response.poiList, error: NSError.init())
         XCTAssertTrue(mockVehicleListViewModelDelegate.invokedHideLoadingView)
         XCTAssertEqual(mockVehicleListViewModelDelegate.invokedHideLoadingViewCount, 1)
     }

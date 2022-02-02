@@ -33,14 +33,6 @@ final class MockVehicleListViewModelDelegate: VehicleListViewModelDelegate {
         invokedReloadDataCount += 1
     }
 
-    var invokedEndRefreshing = false
-    var invokedEndRefreshingCount = 0
-
-    func endRefreshing() {
-        invokedEndRefreshing = true
-        invokedEndRefreshingCount += 1
-    }
-
     var invokedPrepareCollectionView = false
     var invokedPrepareCollectionViewCount = 0
 

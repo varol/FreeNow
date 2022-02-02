@@ -7,6 +7,7 @@
 
 import UIKit
 
+@objcMembers
 class BaseViewController: UIViewController, LoadingShowable {
 
     override func viewDidLoad() {

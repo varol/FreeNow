@@ -7,6 +7,7 @@
 
 import UIKit
 
+@objcMembers
 final class VehicleListCollectionViewCell: BaseCollectionViewCell {
 
     @IBOutlet private weak var idLabel: BaseLabel!
@@ -38,27 +39,27 @@ final class VehicleListCollectionViewCell: BaseCollectionViewCell {
 }
 
 extension VehicleListCollectionViewCell: VehicleListCollectionViewCellViewModelDelegate {
-    func setIdLabel(_ text: String) {
+    func setIdLabelText(_ text: String) {
         idLabel.text = text
     }
     
-    func setLongitudeLabel(_ text: String) {
-        longitudeLabel.text = text
+    func setLongitudeLabelText(_ text: String) {
+        longitudeLabel.text = String(text)
     }
     
-    func setLatitudeLabel(_ text: String) {
+    func setLatitudeLabelText(_ text: String) {
         latitudeLabel.text = text
     }
     
-    func setStateLabel(_ text: String) {
+    func setStateLabelText(_ text: String) {
         stateLabel.text = text
     }
     
-    func setTypeLabel(_ text: String) {
+    func setTypeLabelText(_ text: String) {
         typeLabel.text = text
     }
     
-    func setHeadingLabel(_ text: String) {
+    func setHeadingLabelText(_ text: String) {
         headingLabel.text = text
     }
 }

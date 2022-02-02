@@ -9,16 +9,18 @@ import Foundation
 import CoreLocation
 
 // MARK: - Vehicles
-struct VehiclesResponse: Codable {
+@objcMembers
+class VehiclesResponse: NSObject, Codable {
     let poiList: [Vehicle]?
 }
 
 // MARK: - Vehicle
-struct Vehicle: Codable {
+@objcMembers
+class Vehicle: NSObject, Codable {
     let id: Int?
     let coordinate: Coordinate?
-    let state: State?
-    let type: TypeEnum?
+    let state: String?
+    let type: String?
     let heading: Double?
     
     public var coordinates: CLLocationCoordinate2D {
@@ -27,7 +29,8 @@ struct Vehicle: Codable {
 }
 
 // MARK: - Coordinate
-struct Coordinate: Codable {
+@objcMembers
+class Coordinate: NSObject,Codable {
     let latitude, longitude: Double?
 }
 

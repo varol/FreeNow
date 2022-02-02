@@ -43,23 +43,19 @@ final class MapViewModel: BaseViewModel {
     }
 
     internal func fetchVehicles(_ mapRegion: MKMapRect) {
-        
-        apiService.fetchNearbyVehicles(coordinates: getVehicleRequestModel(mapRegion)) {[weak self] result in
+        apiService.fetchNearbyVehicles(coordinates: getVehicleRequestModel(mapRegion)) {[weak self] vehicles, apiError in
             guard let self = self else { return }
-            self.handleVehicleResult(result: result)
+            self.handleVehicleResult(vehicles: vehicles, error: apiError)
         }
     }
     
-    internal func handleVehicleResult(result: VehicleResult) {
+    internal func handleVehicleResult(vehicles: [Vehicle]?, error: NSError?) {
         self.delegate?.hideLoadingView()
         
-        switch result {
-        case .success(let response):
-            if let vehicles = response.poiList {
-                self.vehicles = vehicles
-                self.addAnnotation(with: vehicles)
-            }
-        case .failure(let error):
+        if let vehicles = vehicles {
+            self.vehicles = vehicles
+            self.addAnnotation(with: vehicles)
+        } else if let error = error {
             print(error)
         }
     }

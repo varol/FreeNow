@@ -33,7 +33,7 @@ class MapViewModelTests: XCTestCase {
     func test_HideLoading() {
         XCTAssertFalse(mockMapViewModelDelegate.invokedHideLoadingView)
         XCTAssertEqual(mockMapViewModelDelegate.invokedHideLoadingViewCount, 0)
-        sut.handleVehicleResult(result: .success(.response))
+        sut.handleVehicleResult(vehicles: VehiclesResponse.response.poiList, error: NSError.init())
         XCTAssertTrue(mockMapViewModelDelegate.invokedHideLoadingView)
         XCTAssertEqual(mockMapViewModelDelegate.invokedHideLoadingViewCount, 1)
     }
@@ -49,7 +49,7 @@ class MapViewModelTests: XCTestCase {
     func test_AddAnnotation() {
         XCTAssertFalse(mockMapViewModelDelegate.invokedAddAnnotations)
         XCTAssertEqual(mockMapViewModelDelegate.invokedAddAnnotationsCount, 0)
-        sut.handleVehicleResult(result: .success(.response))
+        sut.handleVehicleResult(vehicles: VehiclesResponse.response.poiList, error: NSError.init())
         XCTAssertTrue(mockMapViewModelDelegate.invokedAddAnnotations)
         XCTAssertEqual(mockMapViewModelDelegate.invokedAddAnnotationsCount, 121)
     }

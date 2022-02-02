@@ -8,33 +8,45 @@
 import FreeNowCoreAPI
 import MapKit.MKGeometry
 
-typealias VehicleResult = Result<VehiclesResponse, APIClientError>
-
-protocol APIServiceProtocol: AnyObject {
+@objc protocol APIServiceProtocol  {
     func fetchVehicles(coordinates: VehiclesRequestModel,
-                       completion: @escaping ((VehicleResult) -> Void))
+                       completion: @escaping (([Vehicle]?, NSError?) -> Void))
     func fetchNearbyVehicles(coordinates: VehiclesRequestModel,
-                       completion: @escaping ((VehicleResult) -> Void))
+                       completion: @escaping (([Vehicle]?, NSError?) -> Void))
 }
 
-class APIService: APIServiceProtocol {
+@objcMembers
+class APIService: NSObject, APIServiceProtocol {
+    
     let networkManager = NetworkManager<VehiclesEndpointItem>()
-    
-    func fetchVehicles(coordinates: VehiclesRequestModel,
-                       completion: @escaping ((VehicleResult) -> Void)) {
-        
-        networkManager.request(endpoint: .spesificLocation(coordinates),
-                               type: VehiclesResponse.self) { result in
-            completion(result)
-        }
-    }
-    
-    func fetchNearbyVehicles(coordinates: VehiclesRequestModel,
-                       completion: @escaping ((VehicleResult) -> Void)) {
-        
+
+    func fetchNearbyVehicles(coordinates: VehiclesRequestModel, completion: @escaping (([Vehicle]?, NSError?) -> Void)) {
         networkManager.request(endpoint: .nearby(coordinates),
                                type: VehiclesResponse.self) { result in
-            completion(result)
+            switch result {
+            case .success(let response):
+                completion(response.poiList, nil)
+            case .failure(let error):
+                completion([], NSError.from(error))
+            }
         }
     }
+    
+    func fetchVehicles(coordinates: VehiclesRequestModel, completion: @escaping (([Vehicle]?, NSError?) -> Void)) {
+        networkManager.request(endpoint: .spesificLocation(coordinates),
+                               type: VehiclesResponse.self) { result in
+            switch result {
+            case .success(let response):
+                completion(response.poiList, nil)
+            case .failure(let error):
+                completion([], NSError.from(error))
+            }
+        }
+    }
+}
+
+extension NSError {
+  class func from(_ apiError: APIClientError) -> NSError {
+    return NSError.init(domain: "FreeNow", code: 0, userInfo: [NSLocalizedDescriptionKey : apiError.localizedDescription])
+  }
 }

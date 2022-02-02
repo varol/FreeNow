@@ -7,6 +7,7 @@
 
 import UIKit
 
+@objcMembers
 class LoadingView {
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     static let shared = LoadingView()

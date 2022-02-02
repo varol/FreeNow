@@ -7,6 +7,7 @@
 
 import Foundation
 
-class BaseViewModel {
+@objcMembers
+class BaseViewModel: NSObject {
     
 }
