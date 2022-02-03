@@ -38,6 +38,8 @@ final class VehicleListCollectionViewCell: BaseCollectionViewCell {
     }
 }
 
+// MARK: - VehicleListCollectionViewCellViewModelDelegate
+
 extension VehicleListCollectionViewCell: VehicleListCollectionViewCellViewModelDelegate {
     func setIdLabelText(_ text: String) {
         idLabel.text = text

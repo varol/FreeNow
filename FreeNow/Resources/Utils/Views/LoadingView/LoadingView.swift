@@ -8,12 +8,13 @@
 import UIKit
 
 @objcMembers
-class LoadingView {
+class LoadingView: NSObject {
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
-    static let shared = LoadingView()
+    @objc static let shared = LoadingView()
     var blurView: UIVisualEffectView = UIVisualEffectView()
 
-    private init() {
+    private override init() {
+        super.init()
         configure()
     }
 

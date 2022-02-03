@@ -32,7 +32,7 @@ extension VehicleListViewModel {
     @objc func pullToRefresh()
 }
 
-@objc public protocol VehicleListViewModelDelegate {
+@objc public protocol VehicleListViewModelDelegate: NSObjectProtocol {
     func showLoadingView()
     func hideLoadingView()
     func reloadData()

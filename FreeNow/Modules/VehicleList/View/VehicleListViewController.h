@@ -8,15 +8,17 @@
 @import UIKit;
 
 @class VehicleListViewModel;
-
+@class APIService;
+@class LoadingView;
 @protocol VehicleListViewModelDelegate;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VehicleListViewController : UIViewController<VehicleListViewModelDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface VehicleListViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) IBOutlet UICollectionView *vehicleListCollectionView;
-
+@property (nonatomic, strong) IBOutlet VehicleListViewModel *viewModel;
+@property (nonatomic, retain) APIService* apiService;
 
 @end
 

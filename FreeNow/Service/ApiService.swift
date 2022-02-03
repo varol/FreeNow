@@ -20,7 +20,9 @@ class APIService: NSObject, APIServiceProtocol {
     
     let networkManager = NetworkManager<VehiclesEndpointItem>()
 
-    func fetchNearbyVehicles(coordinates: VehiclesRequestModel, completion: @escaping (([Vehicle]?, NSError?) -> Void)) {
+    func fetchNearbyVehicles(coordinates: VehiclesRequestModel,
+                             completion: @escaping (([Vehicle]?, NSError?) -> Void)) {
+        
         networkManager.request(endpoint: .nearby(coordinates),
                                type: VehiclesResponse.self) { result in
             switch result {
@@ -32,7 +34,9 @@ class APIService: NSObject, APIServiceProtocol {
         }
     }
     
-    func fetchVehicles(coordinates: VehiclesRequestModel, completion: @escaping (([Vehicle]?, NSError?) -> Void)) {
+    func fetchVehicles(coordinates: VehiclesRequestModel,
+                       completion: @escaping (([Vehicle]?, NSError?) -> Void)) {
+        
         networkManager.request(endpoint: .spesificLocation(coordinates),
                                type: VehiclesResponse.self) { result in
             switch result {
@@ -43,10 +47,4 @@ class APIService: NSObject, APIServiceProtocol {
             }
         }
     }
-}
-
-extension NSError {
-  class func from(_ apiError: APIClientError) -> NSError {
-    return NSError.init(domain: "FreeNow", code: 0, userInfo: [NSLocalizedDescriptionKey : apiError.localizedDescription])
-  }
 }

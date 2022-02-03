@@ -7,12 +7,8 @@
 
 #import "FreeNow-Swift.h"
 #import "VehicleListViewController.h"
-@class VehicleListViewModel;
-@class APIService;
 
-@interface VehicleListViewController ()
-@property (nonatomic, strong) IBOutlet VehicleListViewModel *viewModel;
-@property (nonatomic, retain) APIService* apiService;
+@interface VehicleListViewController ()<VehicleListViewModelDelegate>
 @end
 
 @implementation VehicleListViewController
@@ -20,13 +16,11 @@ static NSString *cellIdentifier = @"VehicleListCollectionViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.apiService = [APIService new];
-    self.viewModel = [[VehicleListViewModel alloc] init:self.apiService];
     _viewModel.delegate = self;
-    [self.viewModel load];
+    [_viewModel load];
 }
 
-#pragma UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [self.viewModel numberOfItems];
@@ -43,8 +37,8 @@ static NSString *cellIdentifier = @"VehicleListCollectionViewCell";
     return cell;
 }
  
-#pragma UICollectionViewDelegate
- 
+// MARK: - UICollectionViewDelegate
+
 - (void)prepareCollectionView{
     self.vehicleListCollectionView.backgroundColor = [UIColor whiteColor];
     self.vehicleListCollectionView.delegate = self;
@@ -57,10 +51,15 @@ static NSString *cellIdentifier = @"VehicleListCollectionViewCell";
     return CGSizeMake(fullWidth, [self.viewModel heightDimension]);
 }
 
+// MARK: - VehicleListViewModelDelegate
 
-- (void)showLoadingView {}
+- (void)showLoadingView {
+    [[LoadingView shared] startLoading];
+}
 
-- (void)hideLoadingView {}
+- (void)hideLoadingView {
+    [[LoadingView shared] hideLoading];
+}
 
 - (void)reloadData {
     [self.vehicleListCollectionView reloadData];
