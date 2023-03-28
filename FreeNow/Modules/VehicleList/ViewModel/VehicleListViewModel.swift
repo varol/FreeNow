@@ -2,7 +2,7 @@
 //  VehicleListViewModel.swift
 //  FreeNow
 //
-//  Created by Varol Aksoy on 28.01.2022.
+//  Created by Varol on 28.01.2022.
 //
 
 import Foundation
